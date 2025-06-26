@@ -385,7 +385,7 @@
             // 
             btnHistorico.Cursor = Cursors.Hand;
             btnHistorico.Image = (Image)resources.GetObject("btnHistorico.Image");
-            btnHistorico.Location = new Point(241, 12);
+            btnHistorico.Location = new Point(267, 12);
             btnHistorico.Name = "btnHistorico";
             btnHistorico.Size = new Size(122, 50);
             btnHistorico.SizeMode = PictureBoxSizeMode.CenterImage;
