@@ -152,6 +152,16 @@ namespace calculadora
                     return $"{valorAnterior}{operador}({percentual}/100*{valorAnterior})";
                 });
 
+                // Converte "número%" sozinho ? "número / 100"
+                // Ex: "2%" ? "0,02"
+                var regexSozinho = new System.Text.RegularExpressions.Regex(@"(?<![\d%])(\d+(?:\.\d+)?)%(?![\d])");
+                expressao = regexSozinho.Replace(expressao, match =>
+                {
+                    string valor = match.Groups[1].Value;
+                    return $"({valor}/100)";
+                });
+
+
                 // Avalia a expressão
                 var resultado = new DataTable().Compute(expressao, null);
 
