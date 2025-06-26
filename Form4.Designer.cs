@@ -98,6 +98,7 @@
             // 
             // btnCalcular
             // 
+            btnCalcular.Cursor = Cursors.Hand;
             btnCalcular.Image = Properties.Resources.calcular;
             btnCalcular.Location = new Point(204, 344);
             btnCalcular.Name = "btnCalcular";
@@ -197,6 +198,7 @@
             Controls.Add(txbValor2);
             Controls.Add(txbValor1);
             Controls.Add(label2);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form4";
             Text = "Regra de Três";
             ((System.ComponentModel.ISupportInitialize)btnCalcular).EndInit();

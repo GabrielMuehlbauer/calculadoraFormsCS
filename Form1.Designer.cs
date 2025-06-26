@@ -96,7 +96,7 @@
             // 
             btnZero.Cursor = Cursors.Hand;
             btnZero.Image = (Image)resources.GetObject("btnZero.Image");
-            btnZero.Location = new Point(126, 525);
+            btnZero.Location = new Point(126, 529);
             btnZero.Name = "btnZero";
             btnZero.Size = new Size(75, 75);
             btnZero.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -108,7 +108,7 @@
             // 
             btnVirgula.Cursor = Cursors.Hand;
             btnVirgula.Image = (Image)resources.GetObject("btnVirgula.Image");
-            btnVirgula.Location = new Point(45, 525);
+            btnVirgula.Location = new Point(45, 529);
             btnVirgula.Name = "btnVirgula";
             btnVirgula.Size = new Size(75, 75);
             btnVirgula.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -120,7 +120,7 @@
             // 
             btnDois.Cursor = Cursors.Hand;
             btnDois.Image = (Image)resources.GetObject("btnDois.Image");
-            btnDois.Location = new Point(126, 444);
+            btnDois.Location = new Point(126, 448);
             btnDois.Name = "btnDois";
             btnDois.Size = new Size(75, 75);
             btnDois.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -132,7 +132,7 @@
             // 
             btnUm.Cursor = Cursors.Hand;
             btnUm.Image = (Image)resources.GetObject("btnUm.Image");
-            btnUm.Location = new Point(45, 444);
+            btnUm.Location = new Point(45, 448);
             btnUm.Name = "btnUm";
             btnUm.Size = new Size(75, 75);
             btnUm.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -144,7 +144,7 @@
             // 
             btnTres.Cursor = Cursors.Hand;
             btnTres.Image = (Image)resources.GetObject("btnTres.Image");
-            btnTres.Location = new Point(207, 444);
+            btnTres.Location = new Point(207, 448);
             btnTres.Name = "btnTres";
             btnTres.Size = new Size(75, 75);
             btnTres.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -156,7 +156,7 @@
             // 
             btnQuatro.Cursor = Cursors.Hand;
             btnQuatro.Image = (Image)resources.GetObject("btnQuatro.Image");
-            btnQuatro.Location = new Point(45, 363);
+            btnQuatro.Location = new Point(45, 367);
             btnQuatro.Name = "btnQuatro";
             btnQuatro.Size = new Size(75, 75);
             btnQuatro.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -168,7 +168,7 @@
             // 
             btnCinco.Cursor = Cursors.Hand;
             btnCinco.Image = (Image)resources.GetObject("btnCinco.Image");
-            btnCinco.Location = new Point(126, 363);
+            btnCinco.Location = new Point(126, 367);
             btnCinco.Name = "btnCinco";
             btnCinco.Size = new Size(75, 75);
             btnCinco.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -180,7 +180,7 @@
             // 
             btnSeis.Cursor = Cursors.Hand;
             btnSeis.Image = (Image)resources.GetObject("btnSeis.Image");
-            btnSeis.Location = new Point(207, 363);
+            btnSeis.Location = new Point(207, 367);
             btnSeis.Name = "btnSeis";
             btnSeis.Size = new Size(75, 75);
             btnSeis.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -192,7 +192,7 @@
             // 
             btnNove.Cursor = Cursors.Hand;
             btnNove.Image = (Image)resources.GetObject("btnNove.Image");
-            btnNove.Location = new Point(207, 282);
+            btnNove.Location = new Point(207, 286);
             btnNove.Name = "btnNove";
             btnNove.Size = new Size(75, 75);
             btnNove.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -204,7 +204,7 @@
             // 
             btnOito.Cursor = Cursors.Hand;
             btnOito.Image = (Image)resources.GetObject("btnOito.Image");
-            btnOito.Location = new Point(126, 282);
+            btnOito.Location = new Point(126, 286);
             btnOito.Name = "btnOito";
             btnOito.Size = new Size(75, 75);
             btnOito.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -216,7 +216,7 @@
             // 
             btnSete.Cursor = Cursors.Hand;
             btnSete.Image = (Image)resources.GetObject("btnSete.Image");
-            btnSete.Location = new Point(45, 282);
+            btnSete.Location = new Point(45, 286);
             btnSete.Name = "btnSete";
             btnSete.Size = new Size(75, 75);
             btnSete.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -228,7 +228,7 @@
             // 
             btnResultado.Cursor = Cursors.Hand;
             btnResultado.Image = (Image)resources.GetObject("btnResultado.Image");
-            btnResultado.Location = new Point(288, 525);
+            btnResultado.Location = new Point(288, 529);
             btnResultado.Name = "btnResultado";
             btnResultado.Size = new Size(75, 75);
             btnResultado.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -240,7 +240,7 @@
             // 
             btnMultiplicacao.Cursor = Cursors.Hand;
             btnMultiplicacao.Image = (Image)resources.GetObject("btnMultiplicacao.Image");
-            btnMultiplicacao.Location = new Point(288, 282);
+            btnMultiplicacao.Location = new Point(288, 286);
             btnMultiplicacao.Name = "btnMultiplicacao";
             btnMultiplicacao.Size = new Size(75, 75);
             btnMultiplicacao.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -252,7 +252,7 @@
             // 
             btnSubtracao.Cursor = Cursors.Hand;
             btnSubtracao.Image = (Image)resources.GetObject("btnSubtracao.Image");
-            btnSubtracao.Location = new Point(288, 363);
+            btnSubtracao.Location = new Point(288, 367);
             btnSubtracao.Name = "btnSubtracao";
             btnSubtracao.Size = new Size(75, 75);
             btnSubtracao.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -264,7 +264,7 @@
             // 
             btnSoma.Cursor = Cursors.Hand;
             btnSoma.Image = (Image)resources.GetObject("btnSoma.Image");
-            btnSoma.Location = new Point(288, 444);
+            btnSoma.Location = new Point(288, 448);
             btnSoma.Name = "btnSoma";
             btnSoma.Size = new Size(75, 75);
             btnSoma.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -276,7 +276,7 @@
             // 
             btnApagar.Cursor = Cursors.Hand;
             btnApagar.Image = (Image)resources.GetObject("btnApagar.Image");
-            btnApagar.Location = new Point(207, 525);
+            btnApagar.Location = new Point(207, 529);
             btnApagar.Name = "btnApagar";
             btnApagar.Size = new Size(75, 75);
             btnApagar.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -303,6 +303,7 @@
             txbVisor.ForeColor = Color.Teal;
             txbVisor.Location = new Point(45, 119);
             txbVisor.Name = "txbVisor";
+            txbVisor.ReadOnly = true;
             txbVisor.Size = new Size(318, 67);
             txbVisor.TabIndex = 20;
             txbVisor.TextAlign = HorizontalAlignment.Right;
@@ -424,6 +425,7 @@
             Controls.Add(btnVirgula);
             Controls.Add(btnZero);
             Controls.Add(label2);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Calculadora de Gabriel Müehlbauer";
             Load += Form1_Load;

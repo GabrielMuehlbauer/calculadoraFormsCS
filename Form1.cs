@@ -143,7 +143,7 @@ namespace calculadora
 
                 // Salva no histórico
                 string entradaFormatada = expressao.Replace("*", "×").Replace("/", "÷").Replace(".", ",");
-                string saidaFormatada = resultado.ToString().Replace(".", ",");
+                string saidaFormatada = Convert.ToString(resultado)?.Replace(".", ",") ?? "Erro";
                 string entradaCompleta = entradaFormatada + " = " + saidaFormatada;
 
                 if (indexHistorico < historico.Length)
@@ -217,7 +217,7 @@ namespace calculadora
                 return;
             }
 
-            string mensagem = string.Join("\n", historicoNaoNulo);
+            string mensagem = string.Join("\n", historicoNaoNulo.Reverse());
             MessageBox.Show(mensagem, "Histórico de Cálculos");
         }
     }

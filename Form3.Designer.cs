@@ -202,6 +202,7 @@
             Controls.Add(label2);
             Controls.Add(txbAltura);
             Controls.Add(txbPeso);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form3";
             Text = "Calcular o IMC";
             ((System.ComponentModel.ISupportInitialize)btnMenu).EndInit();

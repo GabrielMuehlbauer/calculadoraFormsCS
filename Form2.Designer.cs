@@ -35,6 +35,8 @@
             btnIMC = new PictureBox();
             btnRegraDeTres = new PictureBox();
             btnTemperatura = new PictureBox();
+            label3 = new Label();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)btnCalculadoraPrincipal).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnIMC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnRegraDeTres).BeginInit();
@@ -51,7 +53,7 @@
             label2.Size = new Size(294, 42);
             label2.TabIndex = 2;
             label2.Text = "Seja Bem Vindo!";
-            label2.TextAlign = ContentAlignment.MiddleLeft;
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -63,7 +65,7 @@
             label1.Size = new Size(336, 24);
             label1.TabIndex = 3;
             label1.Text = "este é o meu programa de cálculos";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnCalculadoraPrincipal
             // 
@@ -113,12 +115,38 @@
             btnTemperatura.TabStop = false;
             btnTemperatura.Click += btnTemperatura_Click;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Open Sauce Sans", 10F);
+            label3.ForeColor = Color.LightCyan;
+            label3.Location = new Point(118, 471);
+            label3.Name = "label3";
+            label3.Size = new Size(172, 17);
+            label3.TabIndex = 31;
+            label3.Text = "um programa criado por";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Open Sauce Sans Medium", 15F, FontStyle.Bold);
+            label4.ForeColor = Color.LightCyan;
+            label4.Location = new Point(91, 488);
+            label4.Name = "label4";
+            label4.Size = new Size(227, 25);
+            label4.TabIndex = 32;
+            label4.Text = "Gabriel Müehlbauer";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(35, 43, 43);
             ClientSize = new Size(401, 642);
+            Controls.Add(label4);
+            Controls.Add(label3);
             Controls.Add(btnTemperatura);
             Controls.Add(btnRegraDeTres);
             Controls.Add(btnIMC);
@@ -126,6 +154,7 @@
             Controls.Add(label1);
             Controls.Add(label2);
             ForeColor = SystemColors.ControlText;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form2";
             Text = "Menu do Programa de Gabriel";
             ((System.ComponentModel.ISupportInitialize)btnCalculadoraPrincipal).EndInit();
@@ -144,5 +173,7 @@
         private PictureBox btnIMC;
         private PictureBox btnRegraDeTres;
         private PictureBox btnTemperatura;
+        private Label label3;
+        private Label label4;
     }
 }

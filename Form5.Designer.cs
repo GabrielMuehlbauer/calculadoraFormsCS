@@ -134,7 +134,6 @@
             // 
             // pbSeta
             // 
-            pbSeta.Cursor = Cursors.Hand;
             pbSeta.Image = (Image)resources.GetObject("pbSeta.Image");
             pbSeta.Location = new Point(247, 233);
             pbSeta.Name = "pbSeta";
@@ -158,6 +157,7 @@
             Controls.Add(tbxTemp1);
             Controls.Add(cb1);
             Controls.Add(label2);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form5";
             Text = "Conversor de Temperatura";
             ((System.ComponentModel.ISupportInitialize)btnDelete).EndInit();
