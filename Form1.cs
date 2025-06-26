@@ -79,27 +79,42 @@ namespace calculadora
 
         private void btnVirgula_Click(object sender, EventArgs e)
         {
-            txbVisor.Text = txbVisor.Text + ",";
+            string texto = txbVisor.Text;
+
+            // Separadores de números: operadores e parênteses
+            char[] separadores = new char[] { '+', '-', '×', '÷', '(', ')' };
+
+            // Divide o texto com base nos separadores
+            string[] partes = texto.Split(separadores, StringSplitOptions.RemoveEmptyEntries);
+
+            // Pega a última parte (o número atual em digitação)
+            string ultimaParte = partes.Length > 0 ? partes.Last() : "";
+
+            // Se ainda não tem vírgula, pode inserir
+            if (!ultimaParte.Contains(","))
+            {
+                txbVisor.Text += ",";
+            }
         }
 
         private void btnSoma_Click(object sender, EventArgs e)
         {
-            txbVisor.Text = txbVisor.Text + "+";
+            AdicionarOperador("+");
         }
 
         private void btnSubtracao_Click(object sender, EventArgs e)
         {
-            txbVisor.Text = txbVisor.Text + "-";
+            AdicionarOperador("-");
         }
 
         private void btnMultiplicacao_Click(object sender, EventArgs e)
         {
-            txbVisor.Text = txbVisor.Text + "×";
+            AdicionarOperador("×");
         }
 
         private void btnDivisao_Click(object sender, EventArgs e)
         {
-            txbVisor.Text = txbVisor.Text + "÷";
+            AdicionarOperador("÷");
         }
 
         private void btnResultado_Click(object sender, EventArgs e)
@@ -108,6 +123,8 @@ namespace calculadora
             {
                 // Copia a string do visor
                 string expressao = txbVisor.Text;
+
+                expressao = CorrigirMultiplicacoesImplicitas(expressao);
 
                 // Substitui os símbolos visuais pelos que o .NET entende
                 expressao = expressao.Replace("×", "*").Replace("÷", "/").Replace(",", ".");
@@ -187,6 +204,21 @@ namespace calculadora
             }
         }
 
+        private string CorrigirMultiplicacoesImplicitas(string expressao)
+        {
+            // Insere multiplicação entre ")(" ? ")×("
+            expressao = System.Text.RegularExpressions.Regex.Replace(expressao, @"\)\(", ")×(");
+
+            // Insere multiplicação entre número e "(" ? "2(" ? "2×("
+            expressao = System.Text.RegularExpressions.Regex.Replace(expressao, @"(\d)\(", "$1×(");
+
+            // Insere multiplicação entre ")" e número ? ")2" ? ")×2"
+            expressao = System.Text.RegularExpressions.Regex.Replace(expressao, @"\)(\d)", ")×$1");
+
+            return expressao;
+        }
+
+
         private void btnApagar_Click(object sender, EventArgs e)
         {
             if (txbVisor.Text.Length > 0)
@@ -194,6 +226,38 @@ namespace calculadora
                 txbVisor.Text = txbVisor.Text.Substring(0, txbVisor.Text.Length - 1);
             }
         }
+
+        private void AdicionarOperador(string operador)
+        {
+            if (txbVisor.Text.Length == 0)
+            {
+                // Permite iniciar com "-"
+                if (operador == "-")
+                {
+                    txbVisor.Text += operador;
+                }
+                return;
+            }
+
+            char ultimo = txbVisor.Text.Last();
+
+            // Se o último for um operador
+            if ("+-×÷".Contains(ultimo))
+            {
+                // Caso especial: permitir "×-" ou "÷-"
+                if ((ultimo == '×' || ultimo == '÷') && operador == "-")
+                {
+                    txbVisor.Text += operador;
+                    return;
+                }
+
+                // Substitui o último operador por outro (normal)
+                txbVisor.Text = txbVisor.Text.Substring(0, txbVisor.Text.Length - 1);
+            }
+
+            txbVisor.Text += operador;
+        }
+
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
